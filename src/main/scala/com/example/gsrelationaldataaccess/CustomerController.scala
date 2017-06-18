@@ -14,7 +14,7 @@ class CustomerController {
   @Autowired
   val jdbcTemplate: JdbcTemplate = null
 
-  @RequestMapping(value = Array(""))
+  @GetMapping(value = Array(""))
   def getCustomers = {
     jdbcTemplate.queryForList("SELECT id, first_name, last_name FROM customers")
   }
